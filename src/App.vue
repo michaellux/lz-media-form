@@ -1,26 +1,66 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <TheHeader :title="title" />
+    <div class="container">
+      <base-card>
+        <base-button @click="switchTab('login')" :mode="setLoginActiveTab">Login</base-button>
+        <base-button @click="switchTab('register')" :mode="setRegisterActiveTab">Register</base-button>
+      </base-card>
+      <keep-alive>
+        <component :is="selectedTab"></component>
+      </keep-alive>
+      <!-- Now Lets have them switch component -->
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from "./components/layouts/TheHeader";
+
+import Login from "./components/Authentication/Login";
+import Register from "./components/Authentication/Register";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    TheHeader,
+    Login,
+    Register
+  },
+  data() {
+    return {
+      title: "Authentication component in VUE JS",
+      selectedTab: "login"
+    };
+  },
+  methods: {
+    switchTab(tab) {
+      this.selectedTab = tab;
+    }
+  },
+  computed: {
+    setLoginActiveTab(){
+      return this.selectedTab === 'login' ? '' : 'default';
+    },
+    setRegisterActiveTab() {
+      return this.selectedTab === 'register' ? '' : 'default';
+    }
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 </style>
