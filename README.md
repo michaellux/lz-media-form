@@ -1,4 +1,6 @@
 # login_register
+ Demo-link - https://login-register-vue.netlify.app/
+visit my youtube-channel with the video -> https://www.youtube.com/watch?v=tPcrS2wH8d0&fbclid=IwAR1tvIlKujDBBFT6XN94l4vsNZ8Ug-6SqeZsPD00tvQiKCFO4wAQOPb6rec
 
 ## Project setup
 ```
