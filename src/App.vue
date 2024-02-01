@@ -144,6 +144,6 @@ export default {
   color: #000;
   position: absolute;
   top: 15.6rem;
-  width: 85%;
+  width: 96%;
 }
 </style>

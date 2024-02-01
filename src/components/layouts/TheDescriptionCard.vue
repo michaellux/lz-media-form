@@ -16,6 +16,7 @@ export default {
 <style >
 .description-card {
   width: 72%;
-  margin-right: 6.9375rem;
+  margin-right: 3.4rem;
+  max-width: 46.06rem;
 }
 </style>

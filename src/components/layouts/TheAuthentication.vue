@@ -20,6 +20,9 @@ export default {
   width: 50%;
   margin-top: 6.6875rem;
   margin-bottom: 6.6875rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 28.38rem;
 }
 .authentication-title {
   font-family: var(--font-family);
