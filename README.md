@@ -15,7 +15,4 @@ yarn serve
 yarn build
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+Tested on Node.js 14.21.3
