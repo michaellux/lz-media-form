@@ -1,7 +1,7 @@
 <template>
   <!-- lets use the base-card -->
   <base-card>
-    <form class="form">
+    <form class="form" id="register-form">
       <div class="form-control">
         <label for="email">Email Address</label>
         <input
@@ -12,12 +12,12 @@
         />
       </div>
       <div class="form-control">
-        <label for="email">User name</label>
+        <label for="username">User name</label>
         <input
           placeholder="Enter your User name"
-          type="email"
-          name="email"
-          id="email"
+          type="text"
+          name="username"
+          id="username"
         />
       </div>
       <div class="form-control">
@@ -30,7 +30,9 @@
         />
       </div>
       <div class="form-button">
-        <base-button type="submit">Register</base-button>
+        <base-button type="button" @click="postfunction()"
+          >Register</base-button
+        >
       </div>
     </form>
   </base-card>
@@ -39,6 +41,15 @@
 <script>
 export default {
   name: "Login",
+  methods: {
+    postfunction() {
+      var ajax = new XMLHttpRequest();
+      var data = document.getElementById("register-form");
+      var formdata = new FormData(data);
+      ajax.open("POST", "/register", true);
+      ajax.send(formdata);
+    },
+  },
 };
 </script>
 

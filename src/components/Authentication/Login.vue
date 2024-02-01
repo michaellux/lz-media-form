@@ -1,14 +1,14 @@
 <template>
   <!-- lets use the base-card -->
   <base-card>
-    <form class="form">
+    <form class="form" id="login-form">
       <div class="form-control">
-        <label for="email">User name</label>
+        <label for="username">User name</label>
         <input
           placeholder="Enter your User name"
-          type="email"
-          name="email"
-          id="email"
+          type="text"
+          name="username"
+          id="username"
         />
       </div>
       <div class="form-control">
@@ -19,10 +19,10 @@
           name="password"
           id="password"
         />
-        <span class="password-note">Forgot Password ?</span>
+        <a href="#" class="password-note">Forgot Password ?</a>
       </div>
       <div class="form-button">
-        <base-button type="submit">Login</base-button>
+        <base-button type="button" @click="postfunction()">Login</base-button>
       </div>
     </form>
   </base-card>
@@ -31,6 +31,15 @@
 <script>
 export default {
   name: "Login",
+  methods: {
+    postfunction() {
+      var ajax = new XMLHttpRequest();
+      var data = document.getElementById("login-form");
+      var formdata = new FormData(data);
+      ajax.open("POST", "/login", true);
+      ajax.send(formdata);
+    },
+  },
 };
 </script>
 
@@ -70,6 +79,7 @@ input:focus {
   font-size: 0.75rem;
   color: #000;
   margin: 1.3rem 0.2rem;
+  text-decoration: none;
 }
 .form-button {
   text-align: right;
