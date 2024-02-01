@@ -176,4 +176,12 @@ export default {
     height: 3.69rem;
   }
 }
+@media screen and (width <= 425px) {
+  .container {
+    margin: 2.38rem 0 2.38rem 1.625rem;
+  }
+  .authentication-form {
+    width: 91%;
+  }
+}
 </style>

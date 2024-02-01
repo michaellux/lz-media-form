@@ -80,4 +80,9 @@ input:focus {
   width: 14.5rem;
   height: 3.06rem;
 }
+@media screen and (width <= 425px) {
+  .password-note {
+    margin-right: 1rem;
+  }
+}
 </style>

@@ -51,5 +51,17 @@ export default {
   }
 }
 @media screen and (width <= 768px) {
+  .authentication {
+    margin-top: 6rem;
+  }
+}
+@media screen and (width <= 425px) {
+  .authentication {
+    margin-left: 0;
+    width: 100%;
+  }
+  .authentication-title {
+    left: 5.2rem;
+  }
 }
 </style>
