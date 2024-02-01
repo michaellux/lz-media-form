@@ -32,4 +32,24 @@ export default {
   position: absolute;
   left: 8.8rem;
 }
+@media screen and (width < 1248px) {
+  .authentication-title {
+    left: 0;
+  }
+}
+@media screen and (width < 1024px) {
+  .authentication-title {
+    left: 8rem;
+  }
+}
+@media screen and (width < 900px) {
+  .authentication {
+    width: 90%;
+  }
+  .authentication-title {
+    left: 0;
+  }
+}
+@media screen and (width <= 768px) {
+}
 </style>

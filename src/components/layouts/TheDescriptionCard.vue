@@ -19,4 +19,9 @@ export default {
   margin-right: 3.4rem;
   max-width: 46.06rem;
 }
+@media screen and (width < 1024px) {
+  .description-card {
+    display: none;
+  }
+}
 </style>

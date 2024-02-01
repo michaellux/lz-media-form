@@ -146,4 +146,34 @@ export default {
   top: 15.6rem;
   width: 96%;
 }
+@media screen and (width < 1440px) {
+  .descriptioncard-img {
+    background-size: auto;
+    background-position: top;
+  }
+  .descriptioncard-textblock {
+    left: 5vw;
+  }
+}
+@media screen and (width < 1248px) {
+  .authentication-switch {
+    left: 0;
+  }
+}
+@media screen and (width < 1024px) {
+  .authentication-switch {
+    left: 3rem;
+  }
+}
+@media screen and (width < 900px) {
+  .authentication-switch {
+    left: 0rem;
+  }
+}
+@media screen and (width <= 768px) {
+  .authentication-switch {
+    width: 19.69rem;
+    height: 3.69rem;
+  }
+}
 </style>
