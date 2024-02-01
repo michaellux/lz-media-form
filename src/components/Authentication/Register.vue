@@ -1,7 +1,6 @@
 <template>
   <!-- lets use the base-card -->
   <base-card>
-    <h2>Register Here</h2>
     <form>
       <div class="form-control">
         <label for="fullname">Full name</label>

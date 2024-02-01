@@ -8,30 +8,33 @@
 export default {
   name: "BaseButton",
   props: {
-    mode: String
-  }
+    mode: String,
+  },
 };
 </script>
 
 <style scoped>
 button {
-  padding: 0.75rem 1.5rem;
-  font-family: inherit;
-  background-color: #03045e;
-  border: 1px solid #03045e;
+  border-radius: 2.06rem;
+  width: 9.12rem;
+  height: 2.5rem;
+  background: #9e896a;
   color: white;
   cursor: pointer;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 button:hover,
 button:active {
-  background-color: #023e8a;
-  border-color: #023e8a;
+  background-color: #9e896a;
 }
 
 .default {
   background-color: transparent;
-  color: #03045e;
+  color: #9e896a;
   border: none;
 }
 
